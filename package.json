@@ -1,0 +1,22 @@
+{
+  "name": "uad",
+  "version": "1.0.0",
+  "description": "App for U_adhr form.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "watch": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "fs-extra": "^8.1.0",
+    "mongodb": "^3.3.2",
+    "multer": "^1.4.2",
+    "nodemon": "^1.19.2"
+  }
+}

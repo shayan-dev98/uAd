@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Registration Form</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <style>
+  body {
+   background-color: #444;
+  }
+
+  .container {
+
+   max-width: 700px;
+   background-color: #b0e0dd;
+   text-align: center;
+  }
+
+  .header {
+   background-color: hsl(145, 95%, 37%);
+   text-align: center;
+   margin-bottom: 2rem;
+   padding: 1.7rem;
+   border-radius: 0 0 19px 19px;
+   color: white;
+
+  }
+
+  .header h3 {
+   font-size: 1.2rem;
+   color: #efefef;
+  }
+
+
+  .form {
+   text-align: left;
+  }
+
+  .input {
+   border-radius: 7px;
+   margin-bottom: 10px;
+  }
+
+  .label {
+   margin-bottom: 10px;
+   padding: 0.7rem;
+   font-size: 1.1rem;
+   font-weight: 600;
+  }
+
+  .btn {
+   background-color: hsl(145, 91%, 38%);
+   width: 7rem;
+   height: 2.5rem;
+   color: white;
+   margin: 2rem;
+   border-block-color: hsl(145, 91%, 38%);
+  }
+
+  .upload {
+   display: inline-block;
+  }
+
+  .form {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="container">
+  <div class="header">
+   <h2>Udyog Aadhaar Registration</h2>
+   <h3>Register your Trade with Udyog Aadhaar!</h3>
+  </div>
+
+  <form action="/Submit" method="POST" enctype="multipart/form-data">
+   <div class="form">
+
+    <label for="aadhaarCardName" class="label">Your Name on Aadhaar Card/ आवेदक का नाम:</label>
+    <input type="text" class="input" name="aadhaarCardName" placeholder="Your Name/ आवेदक का नाम" autocomplete="off">
+
+
+    <label for="aadhaarCardNo" class="label">Aadhaar Card Number/ आधार संख्या:</label>
+    <input type="text" class="input" name="aadhaarCardNo" placeholder="Aadhaar No/ आधार संख्या" autofocus
+     autocomplete="off">
+
+
+    <label for="panNumber" class="label">PanCard Number/ PAN संख्या:</label>
+    <input type="text" class="input" name="panNumber" placeholder="Pan Number/ PAN संख्या">
+
+
+    <label for="email" class="label">Email-Id/ ईमेल आईडी:</label>
+    <input type="email" class="input" name="email" placeholder="Email-Id/ईमेल आईडी">
+
+
+    <label for="phone" class="label">Phone Number/मोबाइल संख्या:</label>
+    <input type="text" class="input" name="phone" placeholder="Phone Number/मोबाइल संख्या" id="">
+
+
+    <label for="category" class="label">Category/जाति:</label>
+    <select name="category" class="input" id="">
+     <option value="general">General</option>
+     <option value="sc">SC</option>
+     <option value="st">ST</option>
+     <option value="obc">OBC</option>
+    </select>
+
+
+    <label for="gender" class="label">Gender/ लिंग:</label>
+
+    <select name="gender" id="" class="input">
+     <option value="Male">Male/ पुरुष</option>
+     <option value="Female">Female/ महिला</option>
+    </select>
+
+
+    <label for="firmName" class="label">Buisness Name/ बिजनेस का नाम</label>
+    <input type="text" name="firmName" class="input" placeholder="Buisness Name/ बिजनेस का नाम">
+
+
+    <label for="buisnessType" class="label">Select your buisness type:</label>
+
+    <select name="buisnessType" class="input" id="">
+     <option value="porp">Proprietorship</option>
+     <option value="partner">Partnership</option>
+     <option value="private">Private Limited Company</option>
+     <option value="opc">One Person Company</option>
+     <option value="llc">Limited Liablity company</option>
+     <option value="other">Other</option>
+    </select>
+
+
+    <label for="buisnessAddress" class="label">Buisness Address/ बिजनेस का पता:</label>
+    <textarea placeholder="This address would be used by banks, etc." name="buisnessAddress" class="input" cols="40"
+     rows="4"> </textarea>
+
+
+    <label for="dateOfStart" class="label">Date of starting/ व्यापार शुरू होने की तिथि:</label>
+    <input type="date" name="dateOfStart" class="input date">
+
+
+    <label for="nature" class="label">Nature of buisness:</label>
+    <textarea name="nature"
+     placeholder="Sector or products in which you deal. Example- Wood products, Bricks, Plactics, etc." cols="30"
+     rows="4" class="input"></textarea>
+
+
+    <label for="employees" class="label">Number of employees/आपके लिए काम करने वाले लोगों की संख्या:</label>
+    <input type="text" name="employees" class="input" placeholder="काम करने वाले लोगों की संख्या">
+
+
+    <label for="investment" class="label">Your investment/ आपका निवेश:</label>
+    <input type="text" name="investment" class="input" placeholder="Company evaluation/ बैंकों के लिए">
+
+
+    <label for="accountNo" class="label">Account Number used in buisness/बैंक का खाता नंबर:</label>
+    <input type="text" name="accountNo" class="input" placeholder="100% Secure">
+
+
+    <label for="ifsc" class="label">IFSC Code/बैंक का IFSC कोड:</label>
+    <input type="text" name="ifsc" placeholder="On your Checkbook or bank Passbook." class="input">
+
+
+    <label for="aadhaarFile" class="label">Upload your Aadhaar Card:</label>
+    <input type="file" name="aadhaarFile" class="input" accept=".jpg, .pdf">
+
+
+    <label for="panFile" class="label">Upload your Pancard:</label>
+    <input type="file" id="pan-File" name="panFile" class="input" accept=".jpg, .pdf">
+
+   </div>
+
+   <%= typeof msg != 'undefined' ? msg : '' %>
+
+   <input type="submit" value="Submit" class="btn btn-primary ">
+  </form>
+
+ </div>
+</body>
+
+</html>
