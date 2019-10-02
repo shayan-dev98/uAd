@@ -3,13 +3,13 @@ const multer = require('multer')
 const path = require('path')
 const ejs = require('ejs')
 const mongodb = require('mongodb')
-dotenv.config()
 const dotenv = require('dotenv')
+dotenv.config()
 
 //init app
-const app = express();
+const app = express()
 
-const port = 3000;
+//const port = 3000;
 
 // mongodb init
 
@@ -21,7 +21,7 @@ mongodb.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifie
  if (err) return console.log(err)
 
  db = client.db();
- app.listen(process.env.PORT, () => console.log(`Server started on port ${port}`));
+ app.listen(process.env.PORT, () => console.log(`Server started on port ${process.env.PORT}`));
 
 })
 
